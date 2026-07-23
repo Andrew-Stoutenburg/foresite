@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Study Dashboard</title>
+  <!-- Fonts match the Reserve Advisors style guide; system serif/sans fall
+       back gracefully if the network is unavailable. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">RS</span> Reserve Study Dashboard <span class="poc">POC</span></div>
+    <nav>
+      <a href="#/portfolio">Portfolio</a>
+    </nav>
+  </header>
+  <main id="app"><div class="view"><p class="hint">Loading…</p></div></main>
+  <footer class="foot">
+    Proof of concept — data stays in this browser (localStorage). No authentication;
+    a future CRM-tied permission layer hooks into the storage adapter (js/store.js).
+  </footer>
+
+  <!-- SheetJS bundled locally per spec: no CDN dependency at runtime -->
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/parser.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
